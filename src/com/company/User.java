@@ -1,6 +1,6 @@
 package com.company;
 
-public class User {
+public class User implements Comparable {
     private String login;
     private String password;
     private UserTypes type;
@@ -25,7 +25,7 @@ public class User {
         return "User [" +
                 "login=" + login +
                 " password=" + password +
-                " type= " + type + ']';
+                " type=" + type + ']';
     }
 
     @Override
@@ -40,7 +40,14 @@ public class User {
             return true;
         return false;
     }
-}
 
+    @Override
+    public int compareTo(Object obj) {
+        //if (obj == null) return false;
+        User that = (User) obj;
+        if (this.type>that.type) return 1; // Входящий объект больше чем текущий
+        else return -1;
+    }
+}
 
 
