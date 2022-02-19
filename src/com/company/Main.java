@@ -30,6 +30,8 @@ import java.util.Arrays;
         MyUsers.add(user4);
         MyUsers.add(user5);
 
+        MyUsers.get(6);
+
 
 
 
@@ -38,4 +40,3 @@ import java.util.Arrays;
 
 
     }
-
